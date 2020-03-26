@@ -20,6 +20,6 @@ from . import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^index/$', views.index),
-    url(r'^article/(?P<year>[0-9]{4})/$', views.article),
-    url(r'^auth/', include('oauth.urls'))
+    url(r'^article/(?P<year>[0-9]{4})/$', views.article, name='article_detail'),
+    url(r'^auth/', include('oauth.urls')),
 ]
