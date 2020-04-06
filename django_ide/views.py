@@ -3,7 +3,10 @@ from django.urls import reverse
 
 
 def index(request):
-    return HttpResponse('OK!')
+    url = reverse('article_detail', args=(2020,))
+    url_auth = reverse('auth:index')
+    print(url_auth)
+    return HttpResponse('OK!' + url)
 
 
 def article(request, year):

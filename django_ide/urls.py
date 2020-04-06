@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^index/$', views.index),
     url(r'^article/(?P<year>[0-9]{4})/$', views.article, name='article_detail'),
     url(r'^auth/', include('oauth.urls')),
+    url(r'^auth/', include('oauth.urls', namespace='auth'))
 ]
